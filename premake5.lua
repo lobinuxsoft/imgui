@@ -4,6 +4,8 @@ project "ImGui"
 	cppdialect "C++latest"
 	staticruntime "on"
 
+	defines { "IMGUI_API=__declspec(dllexport)" } --No saques esto... necesario para que el engine sea .dll
+
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
